@@ -1,4 +1,5 @@
-// CRIE UMA CLASSE USU¡RIO
+// CRIE UMA CLASSE USU√ÅRIO
+// ALTERE O NAMESPACE DO SEU PROJETO "MeuSite.Models"
 
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
@@ -12,15 +13,14 @@ namespace MeuSite.Models
         public int UsuarioId { get; set; }
 
         [Display(Name = "Nome: ")]
-        [Required(ErrorMessage = "Nome inv·lido")]
-        [StringLength(50, MinimumLength = 4, ErrorMessage = "Minimo 4, M·ximo de 50 caracteres")]
-        [RegularExpression(@"^[A-Za-z·‡‚„ÈËÍÌÔÛÙıˆ˙ÁÒ¡¿¬√…»Õœ”‘’÷⁄«—'\s]+$", ErrorMessage = "Nome inv·lido")]
+        [Required(ErrorMessage = "Nome inv√°lido")]
+        [StringLength(50, MinimumLength = 4, ErrorMessage = "Minimo 4, M√°ximo de 50 caracteres")]
+        [RegularExpression(@"^[A-Za-z√°√†√¢√£√©√®√™√≠√Ø√≥√¥√µ√∂√∫√ß√±√Å√Ä√Ç√É√â√à√ç√è√ì√î√ï√ñ√ö√á√ë'\s]+$", ErrorMessage = "Nome inv√°lido")]
         public string Nome { get; set; }
 
-
         [Display(Name = "CPF: ")]
-        [Required(ErrorMessage = "CPF obrigatÛrio")]
-        [CustomValidationCPF(ErrorMessage = "CPF inv·lido")]
+        [Required(ErrorMessage = "CPF obrigat√≥rio")]
+        [CustomValidationCPF(ErrorMessage = "CPF inv√°lido")]
         public string Cpf { get; set; }
 
     }
